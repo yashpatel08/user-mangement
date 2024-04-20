@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import bcrypt from 'bcryptjs';
 
 export const POST = async (req) => {
-    let { name, age, email, password } = await req.json();
+    let { name, age, email, password } = await req.body();
     if (!name || !age || !email || !password) {
         return new NextResponse({ error: 'Please provide all requires fields' }, { status: 400 });
 
@@ -83,3 +83,18 @@ export const GET = async () => {
     }
 };
 
+export default async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Authorization, Content-Type, Accept, Accept-Language, Origin, User-Agent'
+    );
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
+    return await POST(req, res);
+}

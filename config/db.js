@@ -1,24 +1,24 @@
-import mongoose from 'mongoose';
-import cors from 'cors';
-import express from 'express';
+import mongoose from "mongoose";
 
+let cachedDb = null;
 
-const connectDB = async() => {
-    const app = express();
+export const connectDB = async () => {
+    if (cachedDb) {
+        return cachedDb;
+    }
 
-    app.use(cors());      
-    
-    app.use(cors({
-        origin: 'https://url.vercel.app'
-      }));
-    
     try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log("Connected to MongoDB");
+        const db = await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+        });
+        console.log("Connected to MongoDB Atlas"); 
+        cachedDb = db;
+        return db;
     } catch (error) {
         console.log(error.message);
         process.exit(1);
     }
-}
-
-export default connectDB
+};
