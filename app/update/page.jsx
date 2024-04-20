@@ -27,7 +27,7 @@ const update = () => {
         }
 
         try {
-            const res = await fetch(`https://url.vercel.app`+'/api/users', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/users`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

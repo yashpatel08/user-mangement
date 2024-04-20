@@ -8,7 +8,7 @@ const Delete = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch(`https://url.vercel.app`+`/api/users/${email}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/users/${email}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

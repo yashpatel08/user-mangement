@@ -89,8 +89,8 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     res.setHeader(
         'Access-Control-Allow-Headers',
-        'Authorization, Content-Type, Accept, Accept-Language, Origin, User-Agent'
-    );
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
 
     if (req.method === 'OPTIONS') {
         return res.status(200).end();
