@@ -9,11 +9,11 @@ export default function Home() {
       
       <nav className="mt-8 bg-blue-400 p-4 rounded-lg border border-1">
         <ul className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <li><a href="#create" className="text-white hover:text-gray-200">Create User</a></li>
-          <li><a href="#search" className="text-white hover:text-gray-200">Search User</a></li>
-          <li><a href="#update" className="text-white hover:text-gray-200">Update User</a></li>
-          <li><a href="#delete" className="text-white hover:text-gray-200">Delete User</a></li>
-          <li><a href="#display" className="text-white hover:text-gray-200">Display All Users</a></li>
+          <li><a href="/create" className="text-white hover:text-gray-200">Create User</a></li>
+          <li><a href="/search" className="text-white hover:text-gray-200">Search User</a></li>
+          <li><a href="/update" className="text-white hover:text-gray-200">Update User</a></li>
+          <li><a href="/delete" className="text-white hover:text-gray-200">Delete User</a></li>
+          <li><a href="/display" className="text-white hover:text-gray-200">Display All Users</a></li>
         </ul>
       </nav>
 
