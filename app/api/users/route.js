@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import bcrypt from 'bcryptjs';
 
 export const POST = async (req) => {
-    let { name, age, email, password } = await req.body();
+    let { name, age, email, password } = await req.body;
     if (!name || !age || !email || !password) {
         return new NextResponse({ error: 'Please provide all requires fields' }, { status: 400 });
 
@@ -24,7 +24,7 @@ export const POST = async (req) => {
     console.log(newUser);
     try {
         await newUser.save()
-
+ 
         const userLocalStorage = { name, age, email };
         localStorage.setItem('user', JSON.stringify(userLocalStorage));
 
@@ -82,7 +82,7 @@ export const GET = async () => {
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
     }
 };
-
+ 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Origin', '*');
