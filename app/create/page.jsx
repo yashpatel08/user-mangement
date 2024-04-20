@@ -18,7 +18,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const res = await fetch('/api/users', {
+    const res = await fetch(`https://url.vercel.app`+'/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

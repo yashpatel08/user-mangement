@@ -8,7 +8,7 @@ const display = () => {
 
         const fetchData = async () => {
             try {
-                const res = await fetch('/api/users', {
+                const res = await fetch(`https://url.vercel.app`+'/api/users', {
                     method: 'GET',
                     headers: { 
                         'Content-Type': 'application/json'
