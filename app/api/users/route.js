@@ -28,7 +28,7 @@ export const POST = async (req) => {
         const userLocalStorage = { name, age, email };
         localStorage.setItem('user', JSON.stringify(userLocalStorage));
 
-        return new NextResponse('User successfully registered !', { status: 200 });
+        return new NextResponse('User successfully registered !', { status: 201 });
     } catch (error) {
         return new NextResponse({ error: 'User not registered' }, { status: 500 })
     }
