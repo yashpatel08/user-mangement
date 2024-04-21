@@ -30,7 +30,7 @@ const Search = () => {
 
 
     return (
-        <div className="flex flex-col  items-center h-screen mt-0">
+        <div className="flex flex-col  items-center h-screen pt-12">
 
             <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-4 pt-6 pb-8 mb-4 flex flex-col">
                 <input className="m-4 p-1 border border-1" name="email" type="email" placeholder="email" onChange={handleChange} />
