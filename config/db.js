@@ -1,24 +1,18 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-let cachedDb = null;
-
-export const connectDB = async () => {
-    if (cachedDb) {
-        return cachedDb;
-    }
-
+const connectDB = async () => {
     try {
-        const db = await mongoose.connect(process.env.MONGO_URI, {
+        const connection = await mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            useCreateIndex: true
         });
-        console.log("Connected to MongoDB Atlas"); 
-        cachedDb = db;
-        return db;
+        console.log(`MongoDB Connected: ${connection.connection.host}`);
     } catch (error) {
-        console.log(error.message);
-        process.exit(1);
+        console.error('Error connecting to MongoDB:', error.message);
+        process.exit(1); // Exit process with failure
     }
 };
+
+export default connectDB;
