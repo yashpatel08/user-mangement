@@ -39,8 +39,8 @@ const display = () => {
                 </div>
             ) : (
                 userdata.map((user, index) => (
-                    <div key={index}>
-                        <ul className='m-4 border border-b-2 w-66'>
+                    <div key={index} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+                        <ul className='m-4 border border-b-2'>
                             <li>ID: {user._id}</li>
                             <li>Name: {user.name}</li>
                             <li>Age: {user.age}</li>
