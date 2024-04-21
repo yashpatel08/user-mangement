@@ -22,9 +22,10 @@ export default function Home() {
       <footer className="mt-8 text-center py-4">
         <p className="text-gray-600">Developed by Yash Patel</p>
         <div className="flex justify-center space-x-4 mt-2">
-          <a href="https://github.com/yashpatel2000" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">GitHub</a>
-          <a href="https://www.linkedin.com/in/yashpatel2000/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">LinkedIn</a>
-          <a href="https://twitter.com/yashpatel2000" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">Twitter</a>
+          <a href="https://github.com/yashpatel08" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:opacity-70 transition-colors duration-100">GitHub</a>
+          <a href="https://www.linkedin.com/in/yash-patel-ab2740225/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:opacity-70 transition-colors duration-100">LinkedIn</a>
+          <a href="https://twitter.com/Yashpatel0808" target="_blank" rel="noopener noreferrer" className="text-gray-600 hhover:opacity-70 transition-colors duration-100">Twitter</a>
+          <a href="https://yashpatel-zeta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:opacity-70 transition-colors duration-100">Website</a>
         </div>
       </footer>
     </main>
