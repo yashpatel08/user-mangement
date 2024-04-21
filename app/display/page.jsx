@@ -39,7 +39,7 @@ const display = () => {
                 </div>
             ) : (
                 userdata.map((user, index) => (
-                    <div key={index} className="flex justify-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+                    <div key={index} className="flex justify-center items-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
                         <ul className='m-4 border border-b-2'>
                             <li>ID: {user._id}</li>
                             <li>Name: {user.name}</li>
