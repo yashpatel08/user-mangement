@@ -33,7 +33,10 @@ const display = () => {
     return (
         <div> 
             <h2>User Data:</h2>
-            {userdata.map((user, index) => (
+            {userdata.length === 0 ? (
+            <p>No user data available. Please create a user.</p>
+        ) : (
+            userdata.map((user, index) => (
                 <div key={index}>
                     <ul className='m-4 border border-b-2 w-66'>
                         <li>ID: {user._id}</li>
@@ -43,7 +46,8 @@ const display = () => {
                         {/* Add more fields as needed */}
                     </ul>
                 </div>
-            ))}
+            ))
+        )}
         </div>
     );
 };
