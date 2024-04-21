@@ -32,6 +32,7 @@ const handleSubmit = async (e) => {
     })
 
     if (res.status === 400) {
+      
       return alert('This email is already registered')
     } else if (res.status === 201) {
       router.push('/')
