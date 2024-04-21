@@ -38,11 +38,11 @@ const display = () => {
                     <p className='pt-10'>No user data available. Please create a user.</p>
                 </div>
             ) : (
-                <div className="flex justify-center">
+                <div className="flex justify-center pt-2">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                         {userdata.map((user, index) => (
                             <div key={index}>
-                                <ul className='mt-4 border border-b-2'>
+                                <ul className='mt-4 border border-b-2 px-3 py-2'>
                                     <li>ID: {user._id}</li>
                                     <li>Name: {user.name}</li>
                                     <li>Age: {user.age}</li>
