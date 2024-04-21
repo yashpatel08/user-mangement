@@ -2,5 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+@media (min-width: 640px) {
+  .toggle-button {
+    position: fixed;
+    top: 2rem; /* Adjust as needed */
+  }
+}
