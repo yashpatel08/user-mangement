@@ -15,7 +15,7 @@ module.exports = {
     },
     colors:{
       'navbar': '#73a1bd',
-     
+      'red': '#DC2626',
     },
   },
   plugins: [],
