@@ -31,7 +31,7 @@ const handleSubmit = async (e) => {
       })
     })
 
-    if(res.status===200){
+    if(res.status==200){
       alert('User successfully registered');
       router.push('/');
     }
