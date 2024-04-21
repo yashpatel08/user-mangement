@@ -34,24 +34,25 @@ const display = () => {
         <div>
             <h2>User Data:</h2>
             {userdata.length === 0 ? (
-                <div className='flex justify-center  text-red'>
+                <div className='flex justify-center text-red'>
                     <p className='pt-10'>No user data available. Please create a user.</p>
                 </div>
             ) : (
-                userdata.map((user, index) => (
-                    <div key={index} className="flex justify-center items-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
-                        <div className="grid grid-cols-1 md:grid-rows-3 gap-4">
-                            <div>
-                            <ul className='m-4 border border-b-2'>
-                                <li>ID: {user._id}</li>
-                                <li>Name: {user.name}</li>
-                                <li>Age: {user.age}</li>
-                                <li>Email: {user.email}</li>
-                            </ul>
+                <div className="flex justify-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                        {userdata.map((user, index) => (
+                            <div key={index}>
+                                <ul className='mt-4 border border-b-2'>
+                                    <li>ID: {user._id}</li>
+                                    <li>Name: {user.name}</li>
+                                    <li>Age: {user.age}</li>
+                                    <li>Email: {user.email}</li>
+                                    {/* Add more fields as needed */}
+                                </ul>
                             </div>
-                        </div>
+                        ))}
                     </div>
-                ))
+                </div>
             )}
         </div>
     );
