@@ -19,7 +19,7 @@ const Navbar = () => {
  
 
       {/* Navbar with links */}
-      <nav className={`fixed top-0  left-0 right-0 bg-navbar h-20 flex items-center justify-center transition-all duration-300 z-10  ${showLinks ? 'h-auto' : 'h-20'}`}>
+      <nav className={`fixed top-0  left-0 right-0 bg-navbar h-16 flex items-center justify-center transition-all duration-300 z-10  ${showLinks ? 'h-auto' : 'h-20'}`}>
         <ul className={`flex gap-4 flex-col sm:flex-row ${showLinks ? 'flex' : 'hidden'} sm:flex`}>
 
           <li className="list-none m-2 text-white hover:text-gray">
