@@ -40,14 +40,13 @@ const display = () => {
             ) : (
                 userdata.map((user, index) => (
                     <div key={index} className="flex justify-center items-center w-full md:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
-                        <div>
-                        <ul className='m-4 border border-b-2'>
-                            <li>ID: {user._id}</li>
-                            <li>Name: {user.name}</li>
-                            <li>Age: {user.age}</li>
-                            <li>Email: {user.email}</li>
-                            {/* Add more fields as needed */}
-                        </ul>
+                        <div className="grid grid-cols-3 gap-4">
+                            <ul className='m-4 border border-b-2'>
+                                <li>ID: {user._id}</li>
+                                <li>Name: {user.name}</li>
+                                <li>Age: {user.age}</li>
+                                <li>Email: {user.email}</li>
+                            </ul>
                         </div>
                     </div>
                 ))
